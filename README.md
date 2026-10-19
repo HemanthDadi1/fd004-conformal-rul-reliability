@@ -8,11 +8,6 @@ for each engine, not only on average, when operating conditions change. It compa
 with an engine-balanced variant (Balanced Engine CQR) under a standard split (IID) and two shifts:
 a held-out operating regime (DS-A) and a restricted operating envelope (DS-B).
 
-## Status
-
-The IID and DS-B rerun results (`FD004_IID_Rerun_Results/`, `FD004_DS_B_Rerun_Results/`) and
-`Supplementary_Data_S1.xlsx` are added in the next commit, when those runs finish.
-
 ## Layout
 
 | Path | What it is |
