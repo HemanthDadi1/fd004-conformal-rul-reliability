@@ -1,0 +1,15 @@
+Condition,Method,Metric,Value
+IID,Asymmetric CQR,Global PICP (%),83.24
+IID,Asymmetric CQR,MPIW,51.5
+IID,Balanced Engine CQR,Global PICP (%),91.67
+IID,Balanced Engine CQR,MPIW,72.3
+DS-A,Asymmetric CQR,Global PICP (%),73.13
+DS-A,Asymmetric CQR,MPIW,45.003
+DS-A,Balanced Engine CQR,Global PICP (%),90.21
+DS-A,Balanced Engine CQR,MPIW,66.737
+DS-B,Asymmetric CQR,Global PICP (%),75.97
+DS-B,Asymmetric CQR,MPIW,45.325
+DS-B,Balanced Engine CQR,Global PICP (%),90.635
+DS-B,Balanced Engine CQR,MPIW,70.252
+DS-A,Balanced Engine CQR,RMSE-vs-coverage r,-0.953
+DS-B,Balanced Engine CQR,RMSE-vs-coverage r,-0.916

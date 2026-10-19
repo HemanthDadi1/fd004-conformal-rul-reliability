@@ -1,0 +1,42 @@
+{
+  "experiment": "FD004_DS_B_Restricted_Operating_Envelope",
+  "seed": 42,
+  "rul_clip": 125,
+  "window_size": 30,
+  "n_regimes": 6,
+  "envelope_quantile": 0.8,
+  "selected_sensors": [
+    "s_2",
+    "s_3",
+    "s_4",
+    "s_7",
+    "s_8",
+    "s_9",
+    "s_11",
+    "s_12",
+    "s_13",
+    "s_14",
+    "s_15",
+    "s_17",
+    "s_20",
+    "s_21"
+  ],
+  "operating_settings": [
+    "setting_1",
+    "setting_2",
+    "setting_3"
+  ],
+  "alpha": 0.2,
+  "quantiles": [
+    0.1,
+    0.5,
+    0.9
+  ],
+  "epochs": 25,
+  "batch_size": 256,
+  "endpoint_rule": {
+    "train": "inside regime-specific central envelope",
+    "calibration": "inside regime-specific central envelope",
+    "test": "outside regime-specific central envelope"
+  }
+}

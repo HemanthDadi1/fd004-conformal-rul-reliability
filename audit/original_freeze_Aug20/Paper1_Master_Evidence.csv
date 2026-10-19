@@ -1,0 +1,12 @@
+Evidence,Result,Interpretation
+IID Asymmetric CQR coverage,83.24%,Efficient calibration meets nominal target in standard test.
+IID Balanced Engine CQR coverage,91.67%,Conservative engine-robust calibration.
+DS-A Asymmetric coverage,73.13%,Falls below 80% under held-out operating regime.
+DS-A Balanced coverage,90.21%,Retains strong global coverage under held-out regime.
+DS-B Asymmetric coverage,75.97%,Again falls below nominal target under envelope shift.
+DS-B Balanced coverage,90.63%,Again remains globally robust.
+DS-A RMSE–coverage correlation,-0.953,Residual coverage failure strongly tracks point-model error.
+DS-B RMSE–coverage correlation,-0.916,Same point-error relationship reproduced under second shift.
+Persistent DS-A/DS-B problem engines,9,Repeated engine-specific failures across distinct shifts.
+DS-A problem-engine mid-life coverage,33.87%,Severe reliability collapse during degradation transition.
+DS-B problem-engine mid-life coverage,34.58%,Mid-life weakness reproduced under envelope shift.

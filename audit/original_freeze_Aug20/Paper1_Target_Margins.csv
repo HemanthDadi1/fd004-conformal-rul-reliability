@@ -1,0 +1,7 @@
+Condition,Method,Coverage (%),Mean Width,Target Margin (pp)
+Standard / IID,Asymmetric CQR,83.24,51.5,3.239999999999995
+Standard / IID,Balanced Engine CQR,91.67,72.3,11.670000000000002
+DS-A: Held-out Regime 0,Asymmetric CQR,73.13,45.0,-6.8700000000000045
+DS-A: Held-out Regime 0,Balanced Engine CQR,90.21,66.74,10.209999999999994
+DS-B: Restricted Envelope,Asymmetric CQR,75.97,45.325,-4.030000000000001
+DS-B: Restricted Envelope,Balanced Engine CQR,90.63,70.252,10.629999999999995

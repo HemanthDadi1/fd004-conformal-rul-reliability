@@ -1,0 +1,7 @@
+Condition,Method,Coverage (%),Mean Width
+Standard / IID,Asymmetric CQR,83.24,51.5
+Standard / IID,Balanced Engine CQR,91.67,72.3
+DS-A: Held-out Regime 0,Asymmetric CQR,73.13,45.0
+DS-A: Held-out Regime 0,Balanced Engine CQR,90.21,66.74
+DS-B: Restricted Envelope,Asymmetric CQR,75.97,45.325
+DS-B: Restricted Envelope,Balanced Engine CQR,90.63,70.252

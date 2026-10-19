@@ -1,0 +1,5 @@
+Method,Shift,IID Coverage (%),Shift Coverage (%),Coverage Change (pp)
+Asymmetric CQR,DS-A: Held-out Regime 0,83.24,73.13,-10.11
+Asymmetric CQR,DS-B: Restricted Envelope,83.24,75.97,-7.269999999999996
+Balanced Engine CQR,DS-A: Held-out Regime 0,91.67,90.21,-1.460000000000008
+Balanced Engine CQR,DS-B: Restricted Envelope,91.67,90.63,-1.0400000000000063

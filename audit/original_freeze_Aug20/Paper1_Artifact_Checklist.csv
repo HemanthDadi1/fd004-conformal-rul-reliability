@@ -1,0 +1,17 @@
+Artifact,Status
+Final standard/IID results tables,CHECK
+Final standard/IID figures,CHECK
+DS-A executed notebook,CHECK
+DS-A final tables,CHECK
+DS-A final figures,CHECK
+DS-B executed notebook,CHECK
+DS-B final tables,CHECK
+DS-B final figures,CHECK
+Engine split definitions,CHECK
+Operating-regime configuration,CHECK
+DS-B envelope thresholds,CHECK
+Final model configuration,CHECK
+Random seed record,CHECK
+Package/environment record,CHECK
+Paper 1 master comparison tables,CHECK
+Paper 1 master figures,CHECK

@@ -1,0 +1,44 @@
+FD004 PAPER 1 — FINAL EVIDENCE SUMMARY
+
+STANDARD / IID
+Asymmetric CQR coverage: 83.24%
+Balanced Engine CQR coverage: 91.67%
+
+DS-A — HELD-OUT OPERATING REGIME
+RMSE: 24.869
+MAE: 14.869
+Asymmetric coverage: 73.13%
+Balanced coverage: 90.21%
+Balanced engines >=80%: 26/38
+Worst-engine Balanced coverage: 52.00%
+RMSE vs Balanced coverage correlation: -0.953
+Mid-life Balanced coverage: 70.88%
+Problem-engine mid-life coverage: 33.87%
+
+DS-B — RESTRICTED OPERATING ENVELOPE
+RMSE: 23.999
+MAE: 15.329
+Asymmetric coverage: 75.97%
+Balanced coverage: 90.63%
+Balanced engines >=80%: 27/38
+Worst-engine Balanced coverage: 50.00%
+RMSE vs Balanced coverage correlation: -0.916
+Mid-life Balanced coverage: 75.16%
+Problem-engine mid-life coverage: 34.58%
+
+CROSS-SHIFT PERSISTENCE
+DS-A problem engines: [17, 25, 105, 115, 120, 156, 181, 184, 194, 201, 240, 245]
+DS-B problem engines: [17, 39, 105, 120, 156, 181, 184, 194, 200, 240, 245]
+Persistent across both: [17, 105, 120, 156, 181, 184, 194, 240, 245]
+Jaccard overlap: 0.643
+
+MAIN CONCLUSION
+Balanced Engine CQR is consistently more robust than Asymmetric CQR under
+two distinct forms of operating-condition distribution shift. Residual
+engine-level reliability failures are strongly associated with point-model
+error and are concentrated in mid-life degradation, indicating that the
+remaining limitation is primarily degradation/RUL representation rather
+than conformal calibration alone.
+
+NEXT
+Clean reproducibility rerun -> freeze Paper 1 -> manuscript -> Paper 2.

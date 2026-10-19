@@ -1,0 +1,6 @@
+Category,Count,Engines
+DS-A problem engines,12,"17, 25, 105, 115, 120, 156, 181, 184, 194, 201, 240, 245"
+DS-B problem engines,11,"17, 39, 105, 120, 156, 181, 184, 194, 200, 240, 245"
+Persistent across DS-A and DS-B,9,"17, 105, 120, 156, 181, 184, 194, 240, 245"
+DS-A only,3,"25, 115, 201"
+DS-B only,2,"39, 200"

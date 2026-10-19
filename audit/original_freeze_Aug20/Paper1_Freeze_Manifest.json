@@ -1,0 +1,78 @@
+{
+  "project": "FD004 Paper 1",
+  "status": "Ready for reproducibility rerun and manuscript freeze",
+  "seed": 42,
+  "target_coverage_percent": 80.0,
+  "experiments_complete": {
+    "standard_iid": true,
+    "DS_A_heldout_regime": true,
+    "DS_B_restricted_operating_envelope": true
+  },
+  "primary_uncertainty_methods": [
+    "Asymmetric CQR",
+    "Balanced Engine CQR"
+  ],
+  "persistent_shift_problem_engines": [
+    17,
+    105,
+    120,
+    156,
+    181,
+    184,
+    194,
+    240,
+    245
+  ],
+  "DS_A_problem_engines": [
+    17,
+    25,
+    105,
+    115,
+    120,
+    156,
+    181,
+    184,
+    194,
+    201,
+    240,
+    245
+  ],
+  "DS_B_problem_engines": [
+    17,
+    39,
+    105,
+    120,
+    156,
+    181,
+    184,
+    194,
+    200,
+    240,
+    245
+  ],
+  "main_findings": [
+    "Asymmetric CQR is more efficient but under-covers under both distribution shifts.",
+    "Balanced Engine CQR retains approximately 90% global coverage under both distribution shifts.",
+    "Balanced Engine CQR does not guarantee engine-level reliability for every engine.",
+    "Residual engine-level coverage failures strongly correlate with point-prediction error.",
+    "Mid-life degradation is the dominant reliability failure region under both DS-A and DS-B.",
+    "A persistent subset of engines fails across two distinct shift mechanisms.",
+    "DS-B failure severity is not explained simply by distance beyond the operating-envelope threshold."
+  ],
+  "next_steps": [
+    "Run one clean reproducibility rerun from a fresh runtime.",
+    "Verify all exported tables and figures exactly match frozen values.",
+    "Archive model/config/splits/environment.",
+    "Freeze Paper 1 results.",
+    "Draft/finalize Paper 1 manuscript.",
+    "Begin Paper 2 physics/degradation-informed robustness experiments."
+  ],
+  "environment": {
+    "python_version": "3.12.13 (main, Mar  4 2026, 09:23:07) [GCC 11.4.0]",
+    "platform": "Linux-6.6.122+-x86_64-with-glibc2.35",
+    "numpy_version": "2.0.2",
+    "pandas_version": "2.2.3",
+    "sklearn_version": "1.6.1",
+    "tensorflow_version": "2.20.0"
+  }
+}

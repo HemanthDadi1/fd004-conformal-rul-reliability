@@ -1,0 +1,99 @@
+{
+  "experiment": "FD004 DS-A held-out Regime 0, converged five-seed rerun",
+  "created_utc": "2026-10-19T14:05:58Z",
+  "data_seed": 42,
+  "model_seeds": [
+    42,
+    123,
+    456,
+    789,
+    1000
+  ],
+  "held_out_regime": 0,
+  "n_regimes": 6,
+  "rul_clip": 125,
+  "window_size": 30,
+  "settings": [
+    "setting_1",
+    "setting_2",
+    "setting_3"
+  ],
+  "sensors": [
+    "s_2",
+    "s_3",
+    "s_4",
+    "s_7",
+    "s_8",
+    "s_9",
+    "s_11",
+    "s_12",
+    "s_13",
+    "s_14",
+    "s_15",
+    "s_17",
+    "s_20",
+    "s_21"
+  ],
+  "split": {
+    "test_size_first": 0.3,
+    "test_size_second": 0.5,
+    "expected_counts": [
+      174,
+      37,
+      38
+    ]
+  },
+  "internal_validation": {
+    "fraction_of_train_engines": 0.2,
+    "split_seed": 42,
+    "note": "training engines only; endpoints filtered exactly like training"
+  },
+  "model": {
+    "projection": 18,
+    "bilstm_units": 64,
+    "attention": "FastTemporalAttention",
+    "quantiles": [
+      0.1,
+      0.5,
+      0.9
+    ],
+    "optimizer": "Adam",
+    "learning_rate": 0.001,
+    "batch_size": 256
+  },
+  "training_rule": {
+    "max_epochs": 150,
+    "monitor": "val_loss",
+    "patience": 15,
+    "start_from_epoch": 30,
+    "restore_best_weights": true
+  },
+  "convergence_check": {
+    "rule": "best_val_loss <= ratio * constant_quantile_val_loss",
+    "ratio": 0.6,
+    "constant_quantiles_fitted_on": "fit engines (training engines minus internal validation)",
+    "failed_seeds": "reported and flagged; never replaced or dropped"
+  },
+  "calibration": {
+    "alpha": 0.2,
+    "asymmetric": "finite-sample higher quantile at ceil((n+1)(1-alpha/2))/n per tail",
+    "balanced": "within-engine np.quantile(.,0.80) default, then ceil((M+1)(1-alpha))/M higher across engines",
+    "interval_clip_at_zero": true
+  },
+  "life_stage": {
+    "Early": "RUL > 80",
+    "Mid": "40 < RUL <= 80",
+    "Late": "RUL <= 40"
+  },
+  "bootstrap": {
+    "replicates": 10000,
+    "unit": "test engine",
+    "rng_seed": 42,
+    "ci": [
+      2.5,
+      97.5
+    ]
+  },
+  "primary_report": "all five seeds (mean and SD); seed 42 as the single-run reference",
+  "secondary_report": "converged seeds only, labelled as such"
+}

@@ -1,0 +1,7 @@
+Condition,Life Stage,RMSE,Balanced Coverage (%)
+DS-A,Early,16.4,96.09
+DS-A,Mid,41.98,70.88
+DS-A,Late,24.6,90.52
+DS-B,Early,17.165,94.72
+DS-B,Mid,40.592,75.16
+DS-B,Late,19.539,93.38
