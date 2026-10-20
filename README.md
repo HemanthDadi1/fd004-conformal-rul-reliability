@@ -56,6 +56,11 @@ notebooks 06–08, which use one training rule for all three protocols, fixed be
 (patience 15, from epoch 30), and a convergence check against the constant-quantile loss. Every
 seed is reported.
 
+Note on early stopping: the notebooks use Keras `EarlyStopping(start_from_epoch=30, restore_best_weights=True)`,
+which ignores epochs 1–30, so each saved model holds the best weights from epoch 31 on. The `convergence_check.csv`
+files took the minimum validation loss over all epochs; `convergence_check_restored_epoch.csv` judges convergence on
+the restored epoch instead. Seven of 30 runs restored a different epoch; no convergence verdict changes.
+
 ## Citation
 
 See `CITATION.cff`. Archive DOI: [add after the Zenodo release].
