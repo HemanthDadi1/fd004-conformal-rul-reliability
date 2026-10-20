@@ -5,8 +5,9 @@ NASA Prognostics Center of Excellence data repository ("Turbofan Engine Degradat
 Saxena et al., 2008) and place the files so that this path exists:
 
     CMAPSSData/train_FD004.txt
+    CMAPSSData/train_FD002.txt   (FD002 replication, notebooks 13–15)
 
-Only `train_FD004.txt` is used. Point the notebooks at the folder that contains `CMAPSSData`
+Only these two training files are used. Point the notebooks at the folder that contains `CMAPSSData`
 by setting the environment variable `FD004_ROOT` to the repository root.
 
 `artifacts/FD004_baseline_tensors.npz` (the IID windows produced by notebook 01) is included

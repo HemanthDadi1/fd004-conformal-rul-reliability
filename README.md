@@ -14,10 +14,14 @@ a held-out operating regime (DS-A) and a restricted operating envelope (DS-B).
 |---|---|
 | `notebooks/01_…`, `02_…` | Preprocessing, IID windows, point-model development (Table 1), original IID uncertainty analysis |
 | `notebooks/03_…`, `04_…`, `05_…` | Original DS-A, DS-B and master-comparison notebooks (archived; see "History") |
-| `notebooks/06_…DS_A_Rerun…` | DS-A, five seeds, pre-registered convergence rule (reported results) |
+| `notebooks/06_…DS_A_Rerun…` | DS-A, five seeds, pre-specified convergence rule (reported results) |
 | `notebooks/07_…IID_Rerun…` | IID, same rule (reported results) |
 | `notebooks/08_…DS_B_Rerun…` | DS-B, same rule (reported results) |
+| `notebooks/13_…`, `14_…`, `15_…` | FD002 replication of 07, 06 and 08: same pipeline, rule and seeds (paper §6.9) |
 | `FD004_IID_Rerun_Results/`, `FD004_DS_A_Rerun_Results/`, `FD004_DS_B_Rerun_Results/` | Everything the reported numbers come from: `protocol.json`, trained models (`models/`), training histories, convergence check, row-level calibration and test predictions, per-engine, life-stage and bootstrap tables, SHA-256 manifest |
+| `FD004_FD002_*_W30_Results/` | Same contents for the FD002 replication |
+| `FD004_Paper1_Width_Baselines/`, `FD004_FD002_Width_Baselines/` | Width- and coverage-matched baselines for Balanced Engine CQR (paper §6.8), per seed and five-seed |
+| `scripts/` | `gen_cal_preds.py` (calibration predictions from the saved models, no training), `width_baselines.py`, `fig4.py` (Figure 4), `make_fd002_nb.py` (builds notebooks 13–15 from 06–08) |
 | `artifacts/FD004_baseline_tensors.npz` | IID input windows produced by notebook 01 |
 | `FD004_DS_B_Results/` | DS-B engine split and envelope thresholds (inputs checked by notebook 08) |
 | `models/b6_variants/b6_cal_eval_split_ids.npz` | IID calibration/evaluation engine split (checked by notebook 07) |
@@ -45,6 +49,19 @@ refuses to run with a different protocol.
 
 Training on a different machine or TensorFlow build can give slightly different weights. The saved
 models and row-level predictions in the results folders are the reference for every reported number.
+
+## Width-matched baselines and FD002
+
+Balanced Engine CQR produces intervals of the same form as Window CQR, only at a higher level (about 93%
+pooled coverage on the calibration set). At equal width, it is no better than Asymmetric or Window CQR.
+To recompute (after the rerun folders hold `calibration_predictions_seed*.csv`, written by `scripts/gen_cal_preds.py`):
+
+```bash
+python scripts/width_baselines.py . FD004_Paper1_Width_Baselines
+python scripts/width_baselines.py . FD004_FD002_Width_Baselines FD002
+```
+
+Notebooks 13–15 rerun the whole pipeline on FD002 (needs `CMAPSSData/train_FD002.txt`); the conclusions replicate.
 
 ## History (why there are reruns)
 
