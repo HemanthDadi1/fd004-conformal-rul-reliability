@@ -63,6 +63,10 @@ python scripts/width_baselines.py . FD004_FD002_Width_Baselines FD002
 
 Notebooks 13–15 rerun the whole pipeline on FD002 (needs `CMAPSSData/train_FD002.txt`); the conclusions replicate.
 
+## IID engine numbering
+
+The saved IID files (`engine`, `engine_index`) number engines by position, not by FD004 unit: fit and internal_val by position (1-200) among the sorted training units, calibration and evaluation by position (1-49) among the sorted validation units. `iid_engine_to_unit.csv` gives the FD004 unit of every engine. DS-A and DS-B files already use unit numbers. For example, IID engines 36, 37 and 49 are units 184, 185 and 247.
+
 ## History (why there are reruns)
 
 The original runs (notebooks 03–05) trained for a fixed 25 epochs. For several seeds that budget
